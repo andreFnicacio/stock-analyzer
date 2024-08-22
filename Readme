@@ -4,7 +4,7 @@ Este projeto realiza a análise de preços de ações e de notícias do mercado,
 
 ## Pré-requisitos
 
-- Python 3.8 ou superior
+- Python 3.10 ou superior
 - Git
 - Ambiente virtual (opcional, mas recomendado)
 
