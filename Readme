@@ -1,0 +1,93 @@
+# Stock Price and News Analysis
+
+Este projeto realiza a análise de preços de ações e de notícias do mercado, gerando um relatório automatizado utilizando a API da Yahoo Finance e outras ferramentas. Este script foi desenvolvido como parte do curso da Rocketseat e serve como uma excelente adição ao seu portfólio.
+
+## Pré-requisitos
+
+- Python 3.8 ou superior
+- Git
+- Ambiente virtual (opcional, mas recomendado)
+
+## Instalação
+
+1. **Clone o repositório:**
+
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   cd seu-repositorio
+   ```
+
+2. **Crie e ative um ambiente virtual:**
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # No Windows: venv\Scripts\activate
+   ```
+
+3. **Instale as dependências:**
+
+   Utilize o `pip` para instalar as bibliotecas necessárias.
+
+   ```bash
+   pip install yfinance
+   pip install 'crewai[tools]'
+   pip install langchain
+   pip install langchain_community
+   pip install IPython
+   ```
+
+## Configuração
+
+1. **Defina a chave da API da OpenAI:**
+
+   No seu terminal ou script, defina a variável de ambiente `OPENAI_API_KEY`:
+
+   ```python
+   import os
+   os.environ['OPENAI_API_KEY'] = "sua-chave-aqui"
+   ```
+
+2. **Instalação das Ferramentas:**
+
+   O script utiliza ferramentas de diferentes bibliotecas, como `yfinance`, `crewai`, e `langchain`. As ferramentas são importadas e configuradas no script principal.
+
+## Execução
+
+1. **Funções Principais:**
+
+   - `fetch_stock_price(ticket)`: Baixa os preços das ações utilizando a API da Yahoo Finance.
+   - `get_news`: Busca e analisa as notícias relacionadas às ações.
+   - `writeAnalyses`: Gera um relatório com base nos dados coletados.
+
+2. **Execução do Script:**
+
+   Após configurar tudo, você pode executar o script da seguinte forma:
+
+   ```python
+   # Exemplo de inicialização do processo de análise
+   results = crew.kickoff(inputs={'ticket': 'AAPL'})
+   
+   # Listando as chaves do resultado
+   list(results.keys())
+
+   # Exibindo o resultado final em Markdown
+   from IPython.display import Markdown
+   Markdown(results['final_output'])
+   ```
+
+## Estrutura do Projeto
+
+```bash
+├── crewai-stocks.ipynb  # Script principal contendo a lógica do projeto
+├── README.md            # Este arquivo README
+```
+
+## Como Contribuir
+
+Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias!
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
